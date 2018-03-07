@@ -1,1 +1,10 @@
-div= 'header'
+include /data/apps.jade
+
+header
+	.container
+		h1= 'Craze'
+		h2= 'A great new free psd theme to showcase your new app.'
+		ul.list-inline
+			each app in apps
+				li.list-inline-item
+					a(href='#')= app.platform

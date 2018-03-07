@@ -1,1 +1,14 @@
-div= 'features'
+include /data/features.jade
+
+section.text-center
+	.container
+		header
+			h1= 'Craze Features'
+			p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, eum nostrum, enim autem, asperiores aliquam assumenda earum temporibus dolor culpa consequatur odio eos, excepturi nisi porro quibusdam! Necessitatibus quod, ullam.'
+		ul.list-unstyled.row
+			each feature in features
+				li.col-6.col-m-4
+					header
+						img(alt=`${feature.title} icon`, src='??')
+						h2= feature.title
+					p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dolore.'
