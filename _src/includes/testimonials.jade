@@ -1,1 +1,10 @@
-div= 'testimonials'
+include /data/testimonials.jade
+
+section
+	.container
+		ul.list-unstyled
+			each testimonial in testimonials
+				li
+					blockquote
+						p= testimonial.text
+						footer= testimonial.name
