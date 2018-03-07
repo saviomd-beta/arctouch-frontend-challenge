@@ -1,2 +1,9 @@
-div= 'footer'
+include /data/navLinks.jade
+
+.container
+	nav
+		ul.justify-content-center.list-unstyled.row
+			each navLink in navLinks
+				li.col-auto
+					a(href='#')= navLink.name
 script(defer, src='js/challenge' + (site.minify ? '.min' : '') + '.js')

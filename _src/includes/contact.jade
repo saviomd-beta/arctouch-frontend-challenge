@@ -1,1 +1,11 @@
-div= 'contact'
+include /data/socialNetworks.jade
+
+section.text-center
+	.container
+		header
+			h1= 'Say Hi & Get in Touch'
+			p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+		ul.list-inline
+			each socialNetwork in socialNetworks
+				li.list-inline-item
+					a(href='#')= socialNetwork.name
