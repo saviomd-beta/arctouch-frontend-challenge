@@ -35,8 +35,9 @@
 }
 
 .plan__btn {
+	$color: #fff;
 	background-color: $blue-dark;
-	color: #fff;
+	color: $color;
 	display: inline-block;
 	padding: ($spacer / 2) $spacer;
 	text-transform: uppercase;
@@ -44,7 +45,7 @@
 	&:focus,
 	&:hover {
 		background-color: darken($blue-dark, 10%);
-		color: #fff;
+		color: $color;
 		text-decoration: none;
 	}
 

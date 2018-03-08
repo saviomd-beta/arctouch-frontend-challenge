@@ -16,21 +16,24 @@
 }
 
 .header__download-button {
+	$color: #fff;
 	$fontSize: $font-size-base * 1.5;
 	$padding: $spacer / 2;
+	$size: ($fontSize * 1.5) + ($padding * 2);
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 50%;
-	color: #fff;
+	color: $color;
 	display: inline-block;
 	font-size: $fontSize;
+	height: $size;
 	padding: $padding;
 	text-align: center;
-	width: ($fontSize * 1.5) + ($padding * 2);
+	width: $size;
 
 	&:focus,
 	&:hover {
 		background-color: rgba(0, 0, 0, 1);
-		color: #fff;
+		color: $color;
 	}
 
 }
