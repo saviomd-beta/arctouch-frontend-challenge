@@ -1,16 +1,20 @@
 include /data/plans.jade
 
-section.text-center
+section.section--grey.mb-5.pt-5.text-center
 	.container
 		header
-			h1= 'Plans'
+			h1.section__title= 'Plans'
 			p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ipsa veniam non vel earum quas adipisci perspiciatis ratione aspernatur voluptatem nihil et laboriosam qui, id blanditiis impedit quo sit iusto!'
-		ul.list-unstyled.row
+		ul.plan-wrapper.align-items-center.list-unstyled.no-gutters.row
 			each plan in plans
-				li.col-6.col-md-3
-					h2= plan.name
-					div= `$${plan.price}`
-					ul
-						each feature in plan.features
-							li= feature
-					a(href='#')= 'Purchase'
+				li.col-6.col-md-3.px-1
+					.plan.mb-3
+						h2.plan__name.mb-0.py-2= plan.name
+						div.plan__price.align-items-start.d-flex.justify-content-center.py-3
+							= `$${plan.price.split('.')[0]}`
+							span.plan__price-cents= `${plan.price.split('.')[1]}`
+						ul.list-unstyled.mx-3
+							each feature in plan.features
+								li.plan_features-item.py-2= feature
+						.plan__btn-wrapper.py-3
+							a.plan__btn(href='#')= 'Purchase'
