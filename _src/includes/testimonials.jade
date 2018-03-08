@@ -1,10 +1,10 @@
 include /data/testimonials.jade
 
-section
+section.py-5.text-center
 	.container
 		ul.list-unstyled
 			each testimonial in testimonials
-				li
+				li.mb-5
 					blockquote
-						p= testimonial.text
-						footer= testimonial.name
+						p.testimonial__text= testimonial.text
+						footer.testimonial__author= testimonial.author

@@ -1,0 +1,19 @@
+.testimonial__text {
+	font-size: $font-size-base * 1.5;
+	font-style: italic;
+
+	&:before {
+		content: "\201C";
+	}
+
+	&:after {
+		content: "\201D";
+	}
+
+}
+
+.testimonial__author {
+	color: $color-title;
+	font-size: $font-size-base * 1.125;
+	font-weight: 700;
+}
