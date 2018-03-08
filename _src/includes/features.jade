@@ -1,14 +1,14 @@
 include /data/features.jade
 
-section.text-center
+section.py-5.text-center
 	.container
 		header
-			h1= 'Craze Features'
+			h1.section__title= 'Craze Features'
 			p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, eum nostrum, enim autem, asperiores aliquam assumenda earum temporibus dolor culpa consequatur odio eos, excepturi nisi porro quibusdam! Necessitatibus quod, ullam.'
 		ul.list-unstyled.row
 			each feature in features
-				li.col-6.col-m-4
+				li.feature.col-12.col-sm-6.col-md-4.mb-0.py-5
 					header
 						img(alt=`${feature.title} icon`, src='??')
-						h2= feature.title
+						h2.feature__title.mb-3= feature.title
 					p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dolore.'

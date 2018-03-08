@@ -1,0 +1,67 @@
+.feature {
+	position: relative;
+	width: 10px;
+}
+
+.feature:before {
+	border-right: 0 solid #e7e7e7;
+	bottom: $spacer;
+	content: "";
+	position: absolute;
+	right: 0;
+	top: $spacer;
+}
+
+@media (min-width: map-get($grid-breakpoints, sm)) and (max-width: map-get($grid-breakpoints, md) - 1px) {
+
+	.feature:nth-child(odd):before {
+		border-right-width: 1px;
+	}
+
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+
+	.feature:not(:nth-child(3n)):before {
+		border-right-width: 1px;
+	}
+
+}
+
+.feature:after {
+	border-bottom: 0 solid #e7e7e7;
+	bottom: 0;
+	content: "";
+	left: $spacer;
+	position: absolute;
+	right: $spacer;
+}
+
+@media (max-width: map-get($grid-breakpoints, sm) - 1px) {
+
+	.feature:not(:last-child):after {
+		border-bottom-width: 1px;
+	}
+
+}
+
+@media (min-width: map-get($grid-breakpoints, sm)) and (max-width: map-get($grid-breakpoints, md) - 1px) {
+
+	.feature:nth-child(-n+4):after {
+		border-bottom-width: 1px;
+	}
+
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+
+	.feature:nth-child(-n+3):after {
+		border-bottom-width: 1px;
+	}
+
+}
+
+.feature__title {
+	color: #222;
+	font-size: $font-size-base * 1.5;
+}
