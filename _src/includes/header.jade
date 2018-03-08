@@ -1,11 +1,15 @@
 include /data/apps.jade
 
-header
+header.header
 	.container
-		h1= 'Craze'
-		h2= 'A great new free psd theme to showcase your new app.'
-		ul.list-inline
-			each app in apps
-				li.list-inline-item
-					a(href='#', title=app.platform)
-						span(class=app.icon)
+		.row
+			.col-12.col-md-7.pt-5
+				h1.header__title.mb-4= 'Craze'
+				h2.header__subtitle.mb-4= 'A great new free psd theme to showcase your new app.'
+				ul.list-inline
+					each app in apps
+						li.list-inline-item
+							a.header__download-button(href='#', title=app.platform)
+								span(class=app.icon)
+			.col-12.col-md-5.pt-3.text-right
+				img(alt='Your new app', src='??')

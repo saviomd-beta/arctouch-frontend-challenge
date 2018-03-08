@@ -1,3 +1,7 @@
 body {
-	color: #333;
+	color: $color-text;
+}
+
+a {
+	transition: 0.3s;
 }

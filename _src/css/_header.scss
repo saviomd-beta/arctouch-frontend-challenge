@@ -1,0 +1,36 @@
+.header {
+	background-color: $blue-light;
+	color: #fff;
+}
+
+.header__title {
+	font-family: "Pacifico", cursive;
+	font-size: $font-size-base * 4.5;
+	text-shadow: 3px 3px 0 $blue-dark;
+}
+
+.header__subtitle {
+	font-size: $font-size-base * 1.5;
+	font-weight: 400;
+	text-shadow: 3px 3px 0 $blue-dark;
+}
+
+.header__download-button {
+	$fontSize: $font-size-base * 1.5;
+	$padding: $spacer / 2;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	font-size: $fontSize;
+	padding: $padding;
+	text-align: center;
+	width: ($fontSize * 1.5) + ($padding * 2);
+
+	&:focus,
+	&:hover {
+		background-color: rgba(0, 0, 0, 1);
+		color: #fff;
+	}
+
+}
