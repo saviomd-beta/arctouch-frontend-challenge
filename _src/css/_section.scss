@@ -1,4 +1,9 @@
+.section--about {
+	background-color: $bg-about;
+}
+
 .section__title {
-	color: #222;
+	color: $color-title;
 	font-size: $font-size-base * 1.875;
+	margin-bottom: $spacer;
 }
