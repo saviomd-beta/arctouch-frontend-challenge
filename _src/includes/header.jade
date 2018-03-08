@@ -7,4 +7,5 @@ header
 		ul.list-inline
 			each app in apps
 				li.list-inline-item
-					a(href='#')= app.platform
+					a(href='#', title=app.platform)
+						span(class=app.icon)

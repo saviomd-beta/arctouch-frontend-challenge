@@ -8,4 +8,5 @@ section.text-center
 		ul.list-inline
 			each socialNetwork in socialNetworks
 				li.list-inline-item
-					a(href='#')= socialNetwork.name
+					a(href='#', title=socialNetwork.name)
+						span(class=socialNetwork.icon)
