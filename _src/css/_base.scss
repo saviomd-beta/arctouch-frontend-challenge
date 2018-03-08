@@ -9,3 +9,12 @@ a {
 .list-item-icon {
 	color: $color-title;
 }
+
+.nav-link {
+	color: $color-text;
+
+	&:focus,
+	&:hover {
+		color: $color-text;
+	}
+}
