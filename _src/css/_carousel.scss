@@ -1,0 +1,33 @@
+.js-carousel {
+	overflow: hidden;
+}
+
+.js-carousel__list-item {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+
+}
+
+.js-carousel__nav {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.js-carousel__nav-item {
+	background: #fff;
+	border: 2px solid $blue-light;
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+	height: $spacer;
+	margin: 0 ($spacer / 4);
+	width: $spacer;
+
+	&.active {
+		background: $blue-light;
+	}
+}
