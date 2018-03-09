@@ -9,9 +9,11 @@ challenge.carousel = (function () {
 		const carouselList = carousel.querySelector('ul');
 		const carouselListItems = carouselList.querySelectorAll('li');
 		carouselList.classList.add('js-carousel__list');
+		let carouselRotation = null;
+		let currentItem = 0;
 
 		// Change current visible item
-		const navigate = function (index) {
+		const navigate = function (index, stopRotation) {
 			const carouselNavItems = carousel.querySelectorAll('.js-carousel__nav-item');
 			for (const item of carouselListItems) {
 				item.classList.remove('active');
@@ -21,7 +23,18 @@ challenge.carousel = (function () {
 			}
 			carouselListItems[index].classList.add('active');
 			carouselNavItems[index].classList.add('active');
+			currentItem = index;
+			if (stopRotation) {
+				clearInterval(carouselRotation);
+			}
 		};
+
+		// Automatic carousel rotation
+		const navigateToNext = function () {
+			const index = (currentItem + 1 < carouselListItems.length ? currentItem + 1 : 0);
+			navigate(index, false);
+		};
+		carouselRotation = setInterval(navigateToNext, 4000);
 
 		// Set carousel height using a resize throttler
 		let resizeTimeout;
@@ -62,7 +75,7 @@ challenge.carousel = (function () {
 				navItem.setAttribute('data-item', index);
 				navItem.addEventListener('click', function () {
 					const item = this.getAttribute('data-item');
-					navigate(item);
+					navigate(item, true);
 				});
 				carouselNav.appendChild(navItem);
 			}
