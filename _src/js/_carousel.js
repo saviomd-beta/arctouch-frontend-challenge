@@ -10,6 +10,7 @@ challenge.carousel = (function () {
 		const carouselListItems = carouselList.querySelectorAll('li');
 		carouselList.classList.add('js-carousel__list');
 
+		// Change current visible item
 		const navigate = function (index) {
 			const carouselNavItems = carousel.querySelectorAll('.js-carousel__nav-item');
 			for (const item of carouselListItems) {
@@ -22,12 +23,34 @@ challenge.carousel = (function () {
 			carouselNavItems[index].classList.add('active');
 		};
 
+		// Set carousel height using a resize throttler
+		let resizeTimeout;
+		const setCarouselHeight = function () {
+			if (!resizeTimeout) {
+				resizeTimeout = setTimeout(() => {
+					resizeTimeout = null;
+					let carouselListHeight = 0;
+					for (const item of carouselListItems) {
+						if (item.offsetHeight > carouselListHeight) {
+							carouselListHeight = item.offsetHeight;
+						}
+					}
+					carouselList.style.height = `${carouselListHeight}px`;
+				}, 100);
+			}
+		};
+		window.onresize = setCarouselHeight;
+
 		if (carouselListItems.length) {
+			setCarouselHeight();
+
+			// Show first carousel item
 			for (const item of carouselListItems) {
 				item.classList.add('js-carousel__list-item');
 			}
 			carouselListItems[0].classList.add('active');
 
+			// Create carousel navigation
 			const carouselNav = document.createElement('ol');
 			carouselNav.classList.add('js-carousel__nav');
 			for (const index of carouselListItems.keys()) {
