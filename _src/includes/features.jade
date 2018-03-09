@@ -9,6 +9,6 @@ section.py-5.text-center
 			each feature in features
 				li.feature.col-12.col-sm-6.col-md-4.mb-0.py-5
 					header
-						img(alt=`${feature.title} icon`, src='??')
+						.feature__icon.mb-3(class=`feature__icon--${feature.icon}`)
 						h2.feature__title.mb-3= feature.title
 					p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dolore.'

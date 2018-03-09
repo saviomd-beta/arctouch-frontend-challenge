@@ -61,6 +61,32 @@
 
 }
 
+.feature__icon {
+	$icon-dimension: 48px;
+	$icon-list: (
+		"computer",
+		"target",
+		"photo",
+		"colors",
+		"user",
+		"cog"
+	);
+	$icon-position: 0;
+	background-image: url("/img/sprite-features.png");
+	display: inline-block;
+	height: $icon-dimension;
+	width: $icon-dimension;
+
+	@each $icon in $icon-list {
+
+		&--#{$icon} {
+			background-position: $icon-position 0;
+		}
+		$icon-position: $icon-position - $icon-dimension;
+
+	}
+}
+
 .feature__title {
 	color: #222;
 	font-size: $font-size-base * 1.5;

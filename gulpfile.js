@@ -78,6 +78,11 @@ gulp.task('js', ['jsLint'], function() {
 		.pipe(gulp.dest('build/js'))
 });
 
+gulp.task('img', function() {
+	return gulp.src('./_src/img/**/*')
+		.pipe(gulp.dest('build/img'))
+});
+
 gulp.task('browserSync', function() {
 	browserSync.init(browserSyncConfig);
 });
@@ -87,11 +92,12 @@ build and dev tasks
 ====================
 */
 gulp.task('default', ['clean'], function() {
-	gulp.start('html', 'css', 'js');
+	gulp.start('html', 'css', 'js', 'img');
 });
 
 gulp.task('dev', ['browserSync'], function() {
 	gulp.watch('_src/**/*.jade', ['html', browserSync.reload])
 	gulp.watch('_src/css/*.scss', ['css', browserSync.reload])
 	gulp.watch('_src/js/*.js', ['js', browserSync.reload])
+	gulp.watch('_src/img/**/*', ['img', browserSync.reload])
 });
