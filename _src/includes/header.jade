@@ -1,7 +1,7 @@
 include /data/apps.jade
 
 header.header
-	.container
+	.container-fluid
 		.row.pt-5
 			.col-12.col-md-7.pt-5
 				h1.header__title.mb-4= 'Craze'
@@ -12,4 +12,4 @@ header.header
 							a.header__download-button(href='#', title=app.platform)
 								span(class=app.icon)
 			.col-12.col-md-5.pt-3.text-right
-				img.img-fluid(alt='Your new app', height='507', src='/img/hand-with-phone.png', width='439')
+				img.header__image.img-fluid(alt='Your new app', height='507', src='/img/hand-with-phone.png', width='439')

@@ -10,7 +10,7 @@
     "url": "https://github.com/saviomd-beta/arctouch-frontend-challenge.git"
   },
   "scripts": {
-    "build": "npm install && gulp",
+    "build": "gulp",
     "start": "gulp dev"
   },
   "dependencies": {

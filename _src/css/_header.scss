@@ -1,7 +1,9 @@
 .header {
+	background-attachment: fixed;
 	background-color: $blue-light;
 	background-image: url("/img/bg-header.png");
 	color: #fff;
+	overflow: hidden;
 }
 
 .header__title {
@@ -37,4 +39,20 @@
 		color: $color;
 	}
 
+}
+
+@keyframes headerImageEntrance {
+
+	from {
+		transform: translateY(30%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+
+}
+
+.header__image {
+	animation: headerImageEntrance 1s;
 }

@@ -6,6 +6,10 @@ a {
 	transition: 0.3s;
 }
 
+.container-fluid {
+	max-width: map-get($container-max-widths, xl);
+}
+
 .list-item-icon {
 	color: $color-title;
 }

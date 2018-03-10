@@ -1,5 +1,5 @@
 section.py-5.section--grey
-	.container
+	.container-fluid
 		header
 			h1.section__title= 'Whats Craze all About?'
 		.row
@@ -14,4 +14,5 @@ section.py-5.section--grey
 						span.list-item-icon.fas.fa-angle-right.mr-3
 						= 'Lorem ipsum dolor sit amet.'
 			.col-12.col-md-5
-				div= 'VIDEO'
+				.embed-responsive.embed-responsive-16by9
+					iframe.embed-responsive-item(allowfullscreen, frameborder='0', height='315', src='https://www.youtube.com/embed/-sQ3Af3DpeM?rel=0', width='560')

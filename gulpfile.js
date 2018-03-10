@@ -25,6 +25,7 @@ var stylelint = require('stylelint');
 var stylelintConfig = require('tools-config-saviomd/stylelint-config');
 var uglify = require('gulp-uglify');
 
+browserSyncConfig.https = false;
 browserSyncConfig.server.baseDir = 'build';
 
 /*
