@@ -1,0 +1,11 @@
+include /data/navLinks.jade
+
+footer.section--grey.py-5
+	.container-fluid
+		nav
+			ul.justify-content-center.list-unstyled.row
+				each navLink in navLinks
+					li.col-auto
+						a.nav-link(href='#')= navLink.name
+script(defer, src='js/challenge' + (site.minify ? '.min' : '') + '.js')
+script(defer, src=site.fontAwesomeUrl)

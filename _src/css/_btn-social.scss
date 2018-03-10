@@ -1,0 +1,18 @@
+.btn-social {
+	$color: #fff;
+	$padding: $spacer / 2;
+	$size: ($font-size-base * 1.5) + ($padding * 2);
+	background-color: #d4d4d4;
+	border-radius: 50%;
+	color: $color;
+	display: inline-block;
+	height: $size;
+	padding: $padding;
+	width: $size;
+
+	&:focus,
+	&:hover {
+		background-color: $blue-light;
+		color: $color;
+	}
+}

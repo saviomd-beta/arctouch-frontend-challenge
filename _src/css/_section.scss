@@ -1,0 +1,9 @@
+.section--grey {
+	background-color: $bg-grey;
+}
+
+.section__title {
+	color: $color-title;
+	font-size: $font-size-base * 1.875;
+	margin-bottom: $spacer;
+}

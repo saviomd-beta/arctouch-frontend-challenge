@@ -1,0 +1,12 @@
+include /data/socialNetworks.jade
+
+section.py-5.text-center
+	.container-fluid
+		header
+			h1.section__title= 'Say Hi & Get in Touch'
+			p= 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+		ul.list-inline
+			each socialNetwork in socialNetworks
+				li.list-inline-item
+					a.btn-social(href='#', title=socialNetwork.name)
+						span(class=socialNetwork.icon)

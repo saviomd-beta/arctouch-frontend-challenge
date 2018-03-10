@@ -1,0 +1,58 @@
+.header {
+	background-attachment: fixed;
+	background-color: $blue-light;
+	background-image: url("/img/bg-header.png");
+	color: #fff;
+	overflow: hidden;
+}
+
+.header__title {
+	font-family: "Pacifico", cursive;
+	font-size: $font-size-base * 4.5;
+	text-shadow: 3px 3px 0 $blue-dark;
+}
+
+.header__subtitle {
+	font-size: $font-size-base * 1.5;
+	font-weight: 400;
+	text-shadow: 3px 3px 0 $blue-dark;
+}
+
+.header__download-button {
+	$color: #fff;
+	$fontSize: $font-size-base * 1.5;
+	$padding: $spacer / 2;
+	$size: ($fontSize * 1.5) + ($padding * 2);
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	color: $color;
+	display: inline-block;
+	font-size: $fontSize;
+	height: $size;
+	padding: $padding;
+	text-align: center;
+	width: $size;
+
+	&:focus,
+	&:hover {
+		background-color: rgba(0, 0, 0, 1);
+		color: $color;
+	}
+
+}
+
+@keyframes headerImageEntrance {
+
+	from {
+		transform: translateY(30%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+
+}
+
+.header__image {
+	animation: headerImageEntrance 1s;
+}

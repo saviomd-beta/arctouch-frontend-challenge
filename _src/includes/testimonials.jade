@@ -1,0 +1,10 @@
+include /data/testimonials.jade
+
+section.py-5.text-center
+	.container-fluid.js-carousel
+		ul.list-unstyled
+			each testimonial in testimonials
+				li.mb-5
+					blockquote
+						p.testimonial__text= testimonial.text
+						footer.testimonial__author= testimonial.author

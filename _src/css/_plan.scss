@@ -1,0 +1,52 @@
+.plan-wrapper {
+	$spacing: 70px;
+	margin-top: -$spacing;
+	position: relative;
+	top: $spacing;
+}
+
+.plan {
+	background-color: #fff;
+}
+
+.plan__name {
+	background-color: $blue-light;
+	color: #fff;
+	font-size: $font-size-base * 1.75;
+	font-weight: 400;
+}
+
+.plan__price {
+	color: $color-title;
+	font-size: $font-size-base * 2.625;
+	line-height: 1;
+}
+
+.plan__price-cents {
+	font-size: $font-size-base * 1.5;
+}
+
+.plan_features-item {
+	border-top: 1px solid #e7e7e7;
+}
+
+.plan__btn-wrapper {
+	background-color: $blue-light;
+}
+
+.plan__btn {
+	$color: #fff;
+	background-color: $blue-dark;
+	color: $color;
+	display: inline-block;
+	padding: ($spacer / 2) $spacer;
+	text-transform: uppercase;
+
+	&:focus,
+	&:hover {
+		background-color: darken($blue-dark, 10%);
+		color: $color;
+		text-decoration: none;
+	}
+
+}
